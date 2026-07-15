@@ -1,0 +1,25 @@
+npm init -y ---> for intialization nodejs application
+npm i express ---> to install express server
+npm i mongoose ---> to install mongoose to connect with database
+npm i multer ---> is use to work with different format of data instead of JSON format , it is also a kind of middleware
+
+GET => server  se data fetch krwana ho tab use krty hain
+POST => jab sever par data send krna ho
+PATCH => server par data already hai aur us data ko update krna hai
+DELETE => sever par data delete krna hai toh delete method ka use krna parta hai
+
+
+--------- first code ----------
+ const express = require('express');
+
+ const app = express() // server instance create kr rhy hain
+
+ app.get("/", (req,res) => {
+   res.send("Hello World")
+ }/ )
+ app.get("/about",(req,res) => {
+     res.send("About Page")
+ }
+ )
+
+ app.listen(3000); // serer ko start krne k liye 
